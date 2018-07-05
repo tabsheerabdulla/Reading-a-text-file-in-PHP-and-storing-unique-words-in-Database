@@ -11,7 +11,7 @@ Goto CMD and head to C:\xampp\php
 
 The CMD Should look as below
 
-D:\xampp\php>php <Pass the php script location> <Text file location>
+D:\xampp\php>php <Pass the php script location - full path> <Text file location  - full path >
 
 2] Advanced Mode
 
