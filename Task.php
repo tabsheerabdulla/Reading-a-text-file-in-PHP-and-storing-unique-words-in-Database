@@ -1,15 +1,11 @@
 <?php 
 
-// print_r(readfile($argv[1]));
-
 $myfile = array_unique(preg_replace("/[^a-zA-Z 0-9]+/", "",explode(' ', file_get_contents($argv[1]))));
 $mode = (!empty($argv[2]))?$argv[2]:"adv";
 $db_name= (!empty($argv[3]))?$argv[3]:"words_db";
 $host = (!empty($argv[4]))?$argv[4]:"localhost";
 $user = (!empty($argv[5]))?$argv[5]:"root";
 $pw = (!empty($argv[6]))?$argv[6]:"";
-
-
 
 echo "\r\n -----------Program Starts--------------\r\n" . PHP_EOL;
 echo "\r\n Processing the file.. \r\n" . PHP_EOL;
@@ -18,11 +14,6 @@ if(!$chk) createDb($db_name);
 
 insertData($myfile,$db_name);
 echo "\r\n There are ".count($myfile)." unique words in the provided text file \r\n" . PHP_EOL;
-// echo "\r\n -----------Program Starts--------------\r\n" . PHP_EOL;
-// echo $myfile. PHP_EOL . "\r\n";
-// echo "File Content: ".file_get_contents($argv[1])."\r\n".PHP_EOL;
-// print_r($myfile);
-// echo PHP_EOL . "\r\n";
 
 echo " Distinct unique words(DB): ".getDisticntCount($db_name)."\r\n".PHP_EOL;
 echo " Creating watchlist table.. \r\n".PHP_EOL;
