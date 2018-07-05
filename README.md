@@ -1,4 +1,4 @@
-# openProjects
+#Reading a text file in PHP and storing unique words in Database
 
 There basically 2 modes in this
 
